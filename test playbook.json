@@ -1,0 +1,2182 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "clean": true,
+            "code_block": "",
+            "description": "test playbook",
+            "hash": "e2dc974763a9edb6ccf3279b4addaca441648c52",
+            "joint": {
+                "cells": [
+                    {
+                        "0": "S",
+                        "1": "T",
+                        "2": "A",
+                        "3": "R",
+                        "4": "T",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "ref-x": 33,
+                                "ref-y": 8,
+                                "text": "START"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "ref-x": 13,
+                                "xlink:href": "/inc/coa/img/block_icon_start.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'lookup_domain_1' block\n    lookup_domain_1(container=container)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "47c76d1f-fd31-4825-80d3-7b2360a93748",
+                        "inPorts": [],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 17,
+                        "line_start": 9,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 1,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 100,
+                            "y": 100
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "state": "start",
+                        "status": "",
+                        "title": "START",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 1
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "265b26c3-f36a-4eec-9da5-9b20235a9955",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "47c76d1f-fd31-4825-80d3-7b2360a93748",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "ba5afd1f-4d9f-4268-81c3-dd1e8f28afcb",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 3
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "c00caa41-3632-4bd3-95e9-a58ecaa54c79",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "ba5afd1f-4d9f-4268-81c3-dd1e8f28afcb",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "9f39724f-9ae7-4eac-a034-6ccc86b7a307",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 6
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "63af2cc2-30ac-4cbc-ac59-d58b64586b93",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "9f39724f-9ae7-4eac-a034-6ccc86b7a307",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "8d46ce09-741b-4db8-8344-d3df0c63ba0a",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 8
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "fba3aa7b-361a-4fa9-8988-addf45b6663e",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "8d46ce09-741b-4db8-8344-d3df0c63ba0a",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "af6bc6cc-c1a9-4981-885f-51b61a3997c8",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 10
+                    },
+                    {
+                        "action": "lookup ip",
+                        "action_type": "investigate",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "ip": "artifact:*.cef.sourceAddress"
+                        },
+                        "angle": 0,
+                        "app": "DNS",
+                        "appid": "876ab991-313e-48e7-bccd-e8c9650c239c",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "lookup ip",
+                                "actions": [
+                                    "lookup ip",
+                                    "lookup domain",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "DNS",
+                                "app_version": "1.3.32",
+                                "appid": "876ab991-313e-48e7-bccd-e8c9650c239c",
+                                "asset_name": "google_dns",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "ip": "artifact:*.cef.sourceAddress"
+                                },
+                                "has_app": true,
+                                "id": 1,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "google_dns",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "ip"
+                                        ],
+                                        "data_path": "action_result.parameter.ip",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "52.91.186.198",
+                                            "123.123.123.123"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "ec2-52-91-186-198.compute-1.amazonaws.com."
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.cannonical_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "198.186.91.52.in-addr.arpa."
+                                        ]
+                                    },
+                                    {
+                                        "column_order": 2,
+                                        "data_path": "action_result.summary.canonical_name",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Hostname",
+                                        "column_order": 1,
+                                        "contains": [
+                                            "host name",
+                                            "domain"
+                                        ],
+                                        "data_path": "action_result.summary.hostname",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "ec2-52-91-186-198.compute-1.amazonaws.com."
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "IP Address",
+                                        "column_order": 0,
+                                        "contains": [
+                                            "ip"
+                                        ],
+                                        "data_path": "action_result.summary.ip",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "52.91.186.198"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Ip: 52.91.186.198\nHostname: ec2-52-91-186-198.compute-1.amazonaws.com.\nCannonical name: 198.186.91.52.in-addr.arpa.",
+                                            "The DNS query name does not exist: 123.123.123.123.in-addr.arpa."
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "ip": {
+                                        "contains": [
+                                            "ip"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "IP to resolve",
+                                        "key": "ip",
+                                        "primary": true,
+                                        "required": true
+                                    }
+                                },
+                                "product_name": "DNS",
+                                "product_vendor": "Generic",
+                                "targets": "1",
+                                "type": "information"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "lookup ip"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Investigate"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_investigate.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def lookup_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('lookup_ip_1() called')\n    \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'lookup_ip_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'lookup_ip_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'ip': container_item[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(\"lookup ip\", parameters=parameters, assets=['google_dns'], callback=whois_domain_1, name=\"lookup_ip_1\", parent_action=action)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "lookup domain",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "9f39724f-9ae7-4eac-a034-6ccc86b7a307",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 62,
+                        "line_start": 39,
+                        "message": "Configuring now",
+                        "name": "lookup ip",
+                        "notes": "",
+                        "number": 1,
+                        "order": 3,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 840,
+                            "y": 80
+                        },
+                        "previous_function": "",
+                        "previous_name": "lookup_ip_1",
+                        "required_params": {
+                            "ip": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Investigate",
+                        "type": "coa.Action",
+                        "warn": "",
+                        "z": 12
+                    },
+                    {
+                        "action": "whois domain",
+                        "action_type": "investigate",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "domain": "lookup_ip_1:artifact:*.cef.sourceDnsDomain"
+                        },
+                        "angle": 0,
+                        "app": "WHOIS",
+                        "appid": "e6723c2e-06ef-415a-8098-62c46c1cb71f",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "whois domain",
+                                "actions": [
+                                    "whois ip",
+                                    "whois domain"
+                                ],
+                                "active": true,
+                                "app_name": "WHOIS",
+                                "app_version": "1.2.41",
+                                "appid": "e6723c2e-06ef-415a-8098-62c46c1cb71f",
+                                "asset_name": "whois",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "domain": "lookup_ip_1:artifact:*.cef.sourceDnsDomain"
+                                },
+                                "has_app": true,
+                                "id": 5,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "whois",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "domain",
+                                            "url"
+                                        ],
+                                        "data_path": "action_result.parameter.domain",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "splunk.com"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.admin",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "John Smith"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.admin.city",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.admin.country",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.data.*.contacts.admin.email",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.admin.fax",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.admin.name",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.admin.organization",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.admin.phone",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.admin.postalcode",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.admin.state",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.admin.street",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.billing",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.registrant",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.registrant.city",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.registrant.country",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.data.*.contacts.registrant.email",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.registrant.fax",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.registrant.name",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.registrant.organization",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.registrant.phone",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.registrant.postalcode",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.registrant.state",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.registrant.street",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.tech",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.tech.city",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.tech.country",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.data.*.contacts.tech.email",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.tech.fax",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.tech.name",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.tech.organization",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.tech.phone",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.tech.postalcode",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.tech.state",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contacts.tech.street",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.creation_date",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "1997-09-15T04:00:00"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.data.*.emails",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "abusecomplaints@markmonitor.com"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.expiration_date",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2020-09-14T04:00:00"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2138514_DOMAIN_COM-VRSN"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.nameservers",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "NS4.SPLUNK.COM"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.raw",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "   Domain Name: SPLUNK.COM\n   Registry Domain ID: 2138514_DOMAIN_COM-VRSN\n   Registrar WHOIS Server: whois.markmonitor.com\n   Registrar URL: http://www.markmonitor.com\n   Updated Date: 2018-02-21T18:36:40Z\n   Creation Date: 1997-09-15T04:00:00Z\n   Registry Expiry Date: 2020-09-14T04:00:00Z\n   Registrar: MarkMonitor Inc.\n   Registrar IANA ID: 292\n   Registrar Abuse Contact Email: abusecomplaints@markmonitor.com\n   Registrar Abuse Contact Phone: +1.2083895740\n   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited\n   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\n   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited\n   Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited\n   Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited\n   Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited\n   Name Server: NS1.SPLUNK.COM\n   Name Server: NS2.SPLUNK.COM\n   Name Server: NS3.SPLUNK.COM\n   Name Server: NS4.SPLUNK.COM\n   DNSSEC: unsigned\n   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/\n>>> Last update of whois database: 2018-11-16T06:11:04Z <<<\n\nFor more information on Whois status codes, please visit https://icann.org/epp\n\nNOTICE: The expiration date displayed in this record is the date the\nregistrar's sponsorship of the domain name registration in the registry is\ncurrently set to expire. This date does not necessarily reflect the expiration\ndate of the domain name registrant's agreement with the sponsoring\nregistrar.  Users may consult the sponsoring registrar's Whois database to\nview the registrar's reported date of expiration for this registration.\n\nTERMS OF USE: You are not authorized to access or query our Whois\ndatabase through the use of electronic processes that are high-volume and\nautomated except as reasonably necessary to register domain names or\nmodify existing registrations; the Data in VeriSign Global Registry\nServices' (\"VeriSign\") Whois database is provided by VeriSign for\ninformation purposes only, and to assist persons in obtaining information\nabout or related to a domain name registration record. VeriSign does not\nguarantee its accuracy. By submitting a Whois query, you agree to abide\nby the following terms of use: You agree that you may use this Data only\nfor lawful purposes and that under no circumstances will you use this Data\nto: (1) allow, enable, or otherwise support the transmission of mass\nunsolicited, commercial advertising or solicitations via e-mail, telephone,\nor facsimile; or (2) enable high volume, automated, electronic processes\nthat apply to VeriSign (or its computer systems). The compilation,\nrepackaging, dissemination or other use of this Data is expressly\nprohibited without the prior written consent of VeriSign. You agree not to\nuse electronic processes that are automated and high-volume to access or\nquery the Whois database except as reasonably necessary to register\ndomain names or modify existing registrations. VeriSign reserves the right\nto restrict your access to the Whois database in its sole discretion to ensure\noperational stability.  VeriSign may restrict or terminate your access to the\nWhois database for failure to abide by these terms of use. VeriSign\nreserves the right to modify these terms at any time.\n\nThe Registry database contains ONLY .COM, .NET, .EDU domains and\nRegistrars.\n",
+                                            "   Domain Name: SPLUNK.COM\n   Registry Domain ID: 2138514_DOMAIN_COM-VRSN\n   Registrar WHOIS Server: whois.markmonitor.com\n   Registrar URL: http://www.markmonitor.com\n   Updated Date: 2018-02-21T18:36:40Z\n   Creation Date: 1997-09-15T04:00:00Z\n   Registry Expiry Date: 2020-09-14T04:00:00Z\n   Registrar: MarkMonitor Inc.\n   Registrar IANA ID: 292\n   Registrar Abuse Contact Email: abusecomplaints@markmonitor.com\n   Registrar Abuse Contact Phone: +1.2083895740\n   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited\n   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\n   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited\n   Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited\n   Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited\n   Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited\n   Name Server: NS1.SPLUNK.COM\n   Name Server: NS2.SPLUNK.COM\n   Name Server: NS3.SPLUNK.COM\n   Name Server: NS4.SPLUNK.COM\n   DNSSEC: unsigned\n   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/\n>>> Last update of whois database: 2018-11-15T05:36:26Z <<<\n\nFor more information on Whois status codes, please visit https://icann.org/epp\n\nNOTICE: The expiration date displayed in this record is the date the\nregistrar's sponsorship of the domain name registration in the registry is\ncurrently set to expire. This date does not necessarily reflect the expiration\ndate of the domain name registrant's agreement with the sponsoring\nregistrar.  Users may consult the sponsoring registrar's Whois database to\nview the registrar's reported date of expiration for this registration.\n\nTERMS OF USE: You are not authorized to access or query our Whois\ndatabase through the use of electronic processes that are high-volume and\nautomated except as reasonably necessary to register domain names or\nmodify existing registrations; the Data in VeriSign Global Registry\nServices' (\"VeriSign\") Whois database is provided by VeriSign for\ninformation purposes only, and to assist persons in obtaining information\nabout or related to a domain name registration record. VeriSign does not\nguarantee its accuracy. By submitting a Whois query, you agree to abide\nby the following terms of use: You agree that you may use this Data only\nfor lawful purposes and that under no circumstances will you use this Data\nto: (1) allow, enable, or otherwise support the transmission of mass\nunsolicited, commercial advertising or solicitations via e-mail, telephone,\nor facsimile; or (2) enable high volume, automated, electronic processes\nthat apply to VeriSign (or its computer systems). The compilation,\nrepackaging, dissemination or other use of this Data is expressly\nprohibited without the prior written consent of VeriSign. You agree not to\nuse electronic processes that are automated and high-volume to access or\nquery the Whois database except as reasonably necessary to register\ndomain names or modify existing registrations. VeriSign reserves the right\nto restrict your access to the Whois database in its sole discretion to ensure\noperational stability.  VeriSign may restrict or terminate your access to the\nWhois database for failure to abide by these terms of use. VeriSign\nreserves the right to modify these terms at any time.\n\nThe Registry database contains ONLY .COM, .NET, .EDU domains and\nRegistrars.\n",
+                                            "   Domain Name: SPLUNK.COM\n   Registry Domain ID: 2138514_DOMAIN_COM-VRSN\n   Registrar WHOIS Server: whois.markmonitor.com\n   Registrar URL: http://www.markmonitor.com\n   Updated Date: 2018-02-21T18:36:40Z\n   Creation Date: 1997-09-15T04:00:00Z\n   Registry Expiry Date: 2020-09-14T04:00:00Z\n   Registrar: MarkMonitor Inc.\n   Registrar IANA ID: 292\n   Registrar Abuse Contact Email: abusecomplaints@markmonitor.com\n   Registrar Abuse Contact Phone: +1.2083895740\n   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited\n   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\n   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited\n   Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited\n   Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited\n   Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited\n   Name Server: NS1.SPLUNK.COM\n   Name Server: NS2.SPLUNK.COM\n   Name Server: NS3.SPLUNK.COM\n   Name Server: NS4.SPLUNK.COM\n   DNSSEC: unsigned\n   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/\n>>> Last update of whois database: 2018-11-14T14:50:03Z <<<\n\nFor more information on Whois status codes, please visit https://icann.org/epp\n\nNOTICE: The expiration date displayed in this record is the date the\nregistrar's sponsorship of the domain name registration in the registry is\ncurrently set to expire. This date does not necessarily reflect the expiration\ndate of the domain name registrant's agreement with the sponsoring\nregistrar.  Users may consult the sponsoring registrar's Whois database to\nview the registrar's reported date of expiration for this registration.\n\nTERMS OF USE: You are not authorized to access or query our Whois\ndatabase through the use of electronic processes that are high-volume and\nautomated except as reasonably necessary to register domain names or\nmodify existing registrations; the Data in VeriSign Global Registry\nServices' (\"VeriSign\") Whois database is provided by VeriSign for\ninformation purposes only, and to assist persons in obtaining information\nabout or related to a domain name registration record. VeriSign does not\nguarantee its accuracy. By submitting a Whois query, you agree to abide\nby the following terms of use: You agree that you may use this Data only\nfor lawful purposes and that under no circumstances will you use this Data\nto: (1) allow, enable, or otherwise support the transmission of mass\nunsolicited, commercial advertising or solicitations via e-mail, telephone,\nor facsimile; or (2) enable high volume, automated, electronic processes\nthat apply to VeriSign (or its computer systems). The compilation,\nrepackaging, dissemination or other use of this Data is expressly\nprohibited without the prior written consent of VeriSign. You agree not to\nuse electronic processes that are automated and high-volume to access or\nquery the Whois database except as reasonably necessary to register\ndomain names or modify existing registrations. VeriSign reserves the right\nto restrict your access to the Whois database in its sole discretion to ensure\noperational stability.  VeriSign may restrict or terminate your access to the\nWhois database for failure to abide by these terms of use. VeriSign\nreserves the right to modify these terms at any time.\n\nThe Registry database contains ONLY .COM, .NET, .EDU domains and\nRegistrars.\n"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.registrar",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "MarkMonitor Inc."
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.updated_date",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-02-21T18:36:40"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.whois_server",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "whois.markmonitor.com"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.city",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.country",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "contains": [
+                                            "domain",
+                                            "url"
+                                        ],
+                                        "data_path": "action_result.summary.domain",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "splunk.com"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.organization",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Whois query did not return any information"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1,
+                                            2
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1,
+                                            2
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "domain": {
+                                        "contains": [
+                                            "domain",
+                                            "url"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Domain to query",
+                                        "key": "domain",
+                                        "order": 0,
+                                        "primary": true,
+                                        "required": true
+                                    }
+                                },
+                                "product_name": "Whois",
+                                "product_vendor": "Generic",
+                                "targets": "5",
+                                "type": "information"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "whois domain"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Investigate"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_investigate.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def whois_domain_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('whois_domain_1() called')\n    \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'whois_domain_1' call\n    inputs_data_1 = phantom.collect2(container=container, datapath=['lookup_ip_1:artifact:*.cef.sourceDnsDomain', 'lookup_ip_1:artifact:*.id'], action_results=results)\n\n    parameters = []\n    \n    # build parameters list for 'whois_domain_1' call\n    for inputs_item_1 in inputs_data_1:\n        if inputs_item_1[0]:\n            parameters.append({\n                'domain': inputs_item_1[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': inputs_item_1[1]},\n            })\n\n    phantom.act(\"whois domain\", parameters=parameters, assets=['whois'], callback=whois_ip_1, name=\"whois_domain_1\", parent_action=action)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "lookup ip",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "8d46ce09-741b-4db8-8344-d3df0c63ba0a",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 85,
+                        "line_start": 62,
+                        "message": "Configuring now",
+                        "name": "whois domain",
+                        "notes": "",
+                        "number": 1,
+                        "order": 4,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1240,
+                            "y": 80
+                        },
+                        "previous_function": "",
+                        "previous_name": "whois_domain_1",
+                        "required_params": {
+                            "domain": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Investigate",
+                        "type": "coa.Action",
+                        "warn": "",
+                        "z": 15
+                    },
+                    {
+                        "action": "whois ip",
+                        "action_type": "investigate",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "ip": "whois_domain_1:artifact:*.cef.sourceAddress"
+                        },
+                        "angle": 0,
+                        "app": "WHOIS",
+                        "appid": "e6723c2e-06ef-415a-8098-62c46c1cb71f",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "whois ip",
+                                "actions": [
+                                    "whois ip",
+                                    "whois domain"
+                                ],
+                                "active": true,
+                                "app_name": "WHOIS",
+                                "app_version": "1.2.41",
+                                "appid": "e6723c2e-06ef-415a-8098-62c46c1cb71f",
+                                "asset_name": "whois",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "ip": "whois_domain_1:artifact:*.cef.sourceAddress"
+                                },
+                                "has_app": true,
+                                "id": 5,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "whois",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "IP",
+                                        "column_order": 0,
+                                        "contains": [
+                                            "ip",
+                                            "ipv6"
+                                        ],
+                                        "data_path": "action_result.parameter.ip",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "203.88.139.34"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Asn",
+                                        "column_order": 2,
+                                        "data_path": "action_result.data.*.asn",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "18207"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Asn Cidr",
+                                        "column_order": 3,
+                                        "data_path": "action_result.data.*.asn_cidr",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "203.88.139.0/24"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Asn Country Code",
+                                        "column_order": 4,
+                                        "data_path": "action_result.data.*.asn_country_code",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "US"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Asn Date",
+                                        "column_order": 5,
+                                        "data_path": "action_result.data.*.asn_date",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2000-04-27"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Asn Registry",
+                                        "column_order": 6,
+                                        "data_path": "action_result.data.*.asn_registry",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "apnic"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Abuse Emails",
+                                        "column_order": 7,
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.data.*.nets.*.abuse_emails",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Address",
+                                        "column_order": 8,
+                                        "data_path": "action_result.data.*.nets.*.address",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "1600 Amphitheatre Parkway"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Cidr",
+                                        "column_order": 9,
+                                        "data_path": "action_result.data.*.nets.*.cidr",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "203.88.128.0/20"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "City",
+                                        "column_order": 10,
+                                        "data_path": "action_result.data.*.nets.*.city",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "San Franscisco"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Country",
+                                        "column_order": 11,
+                                        "data_path": "action_result.data.*.nets.*.country",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "US"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Created",
+                                        "column_order": 12,
+                                        "data_path": "action_result.data.*.nets.*.created",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Description",
+                                        "column_order": 13,
+                                        "data_path": "action_result.data.*.nets.*.description",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Level 3 Parent, LLC"
+                                        ]
+                                    },
+                                    {
+                                        "column_order": 7,
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.data.*.nets.*.emails",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "ipaddressing@level3.com"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.nets.*.handle",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "NET-8-8-8-0-1"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Misc Emails",
+                                        "column_order": 20,
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.data.*.nets.*.misc_emails",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Name",
+                                        "column_order": 14,
+                                        "data_path": "action_result.data.*.nets.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "LVLT-GOGL-8-8-8"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Postal Code",
+                                        "column_order": 15,
+                                        "data_path": "action_result.data.*.nets.*.postal_code",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "94043"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Range",
+                                        "column_order": 16,
+                                        "data_path": "action_result.data.*.nets.*.range",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "203.88.128.0 - 203.88.143.255"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "State",
+                                        "column_order": 17,
+                                        "data_path": "action_result.data.*.nets.*.state",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "CA"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Tech Emails",
+                                        "column_order": 18,
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.data.*.nets.*.tech_emails",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Updated",
+                                        "column_order": 19,
+                                        "data_path": "action_result.data.*.nets.*.updated",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2014-03-14"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.nir",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "contains": [
+                                            "ip"
+                                        ],
+                                        "data_path": "action_result.data.*.query",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "203.88.139.34"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.raw",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.raw_referral",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.referral",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.asn",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "18207"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.country_code",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "US"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.nets.*.address",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "100 CenturyLink Drive"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.nets.*.range",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "203.88.128.0 - 203.88.143.255"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.registry",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "apnic"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Registry: arin ASN: 15169 Country: US Nets: Range: 8.0.0.0 - 8.127.255.255 Address: 100 CenturyLink Drive Range: None Address: 1600 Amphitheatre Parkway"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "ip": {
+                                        "contains": [
+                                            "ip",
+                                            "ipv6"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "IP to query",
+                                        "key": "ip",
+                                        "order": 0,
+                                        "primary": true,
+                                        "required": true
+                                    }
+                                },
+                                "product_name": "Whois",
+                                "product_vendor": "Generic",
+                                "targets": "5",
+                                "type": "information"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "whois ip"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Investigate"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_investigate.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def whois_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('whois_ip_1() called')\n    \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'whois_ip_1' call\n    inputs_data_1 = phantom.collect2(container=container, datapath=['whois_domain_1:artifact:*.cef.sourceAddress', 'whois_domain_1:artifact:*.id'], action_results=results)\n\n    parameters = []\n    \n    # build parameters list for 'whois_ip_1' call\n    for inputs_item_1 in inputs_data_1:\n        if inputs_item_1[0]:\n            parameters.append({\n                'ip': inputs_item_1[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': inputs_item_1[1]},\n            })\n\n    phantom.act(\"whois ip\", parameters=parameters, assets=['whois'], name=\"whois_ip_1\", parent_action=action)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "whois domain",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "af6bc6cc-c1a9-4981-885f-51b61a3997c8",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 108,
+                        "line_start": 85,
+                        "message": "Configuring now",
+                        "name": "whois ip",
+                        "notes": "",
+                        "number": 1,
+                        "order": 5,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1560,
+                            "y": 80
+                        },
+                        "previous_function": "",
+                        "previous_name": "whois_ip_1",
+                        "required_params": {
+                            "ip": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "end",
+                        "status": "",
+                        "title": "Investigate",
+                        "type": "coa.Action",
+                        "warn": "",
+                        "z": 16
+                    },
+                    {
+                        "0": "E",
+                        "1": "N",
+                        "2": "D",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".title": {
+                                "text": "END"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_end.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_finish(container, summary):\n    phantom.debug('on_finish() called')\n    # This function is called after all actions are completed.\n    # summary of all the action and/or all detals of actions \n    # can be collected here.\n\n    # summary_json = phantom.get_summary()\n    # if 'result' in summary_json:\n        # for action_result in summary_json['result']:\n            # if 'action_run_id' in action_result:\n                # action_results = phantom.get_action_results(action_run_id=action_result['action_run_id'], result_data=False, flatten=False)\n                # phantom.debug(action_results)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": false,
+                        "connection_name": "whois ip",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "7194d959-c814-4fb7-8014-b7263643157e",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 121,
+                        "line_start": 108,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 6,
+                        "outPorts": [],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1800,
+                            "y": 100
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "state": "end",
+                        "status": "",
+                        "title": "END",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 17
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "a8d335dd-ce71-4fd9-8fd4-238d773dce69",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "af6bc6cc-c1a9-4981-885f-51b61a3997c8",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "7194d959-c814-4fb7-8014-b7263643157e",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 18
+                    },
+                    {
+                        "action": "lookup domain",
+                        "action_type": "investigate",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "domain": "artifact:*.cef.sourceDnsDomain",
+                            "type": ""
+                        },
+                        "angle": 0,
+                        "app": "DNS",
+                        "appid": "876ab991-313e-48e7-bccd-e8c9650c239c",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "lookup domain",
+                                "actions": [
+                                    "lookup ip",
+                                    "lookup domain",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "DNS",
+                                "app_version": "1.3.32",
+                                "appid": "876ab991-313e-48e7-bccd-e8c9650c239c",
+                                "asset_name": "google_dns",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "domain": "artifact:*.cef.sourceDnsDomain",
+                                    "type": ""
+                                },
+                                "has_app": true,
+                                "id": 1,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "google_dns",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "host name",
+                                            "domain"
+                                        ],
+                                        "data_path": "action_result.parameter.domain",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "ffobaaar.com",
+                                            "phantomcyber.com",
+                                            "amazon.com"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.type",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "contains": [
+                                            "ip"
+                                        ],
+                                        "data_path": "action_result.data.*.record_info_objects.*.record_info",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "54.239.25.192"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "ip"
+                                        ],
+                                        "data_path": "action_result.data.*.record_infos",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "54.239.26.128"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.cannonical_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "phantomcyber.com.",
+                                            "amazon.com."
+                                        ]
+                                    },
+                                    {
+                                        "column_order": 3,
+                                        "data_path": "action_result.summary.canonical_name",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Hostname",
+                                        "column_order": 2,
+                                        "contains": [
+                                            "host name",
+                                            "domain"
+                                        ],
+                                        "data_path": "action_result.summary.hostname",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "ffobaaar.com"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "IP Address",
+                                        "column_order": 1,
+                                        "contains": [
+                                            "ip"
+                                        ],
+                                        "data_path": "action_result.summary.record_info",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "54.239.25.192"
+                                        ]
+                                    },
+                                    {
+                                        "column_order": 0,
+                                        "data_path": "action_result.summary.total_record_infos",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            1,
+                                            6
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "None of DNS query names exist: ['ffobaaar.com.', 'ffobaaar.com.localdomain.']",
+                                            "Record info: 54.239.25.192, Total record infos: 6, Cannonical name: amazon.com."
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "domain": {
+                                        "contains": [
+                                            "host name",
+                                            "domain"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Record to resolve",
+                                        "key": "domain",
+                                        "primary": true,
+                                        "required": true
+                                    },
+                                    "type": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "DNS Record Type",
+                                        "key": "type",
+                                        "required": false,
+                                        "value_list": [
+                                            "A",
+                                            "AAAA",
+                                            "CNAME",
+                                            "HINFO",
+                                            "ISDN",
+                                            "MX",
+                                            "NS",
+                                            "SOA",
+                                            "TXT"
+                                        ]
+                                    }
+                                },
+                                "product_name": "DNS",
+                                "product_vendor": "Generic",
+                                "targets": "1",
+                                "type": "information"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "lookup domain"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Investigate"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_investigate.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def lookup_domain_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('lookup_domain_1() called')\n\n    # collect data for 'lookup_domain_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceDnsDomain', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'lookup_domain_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'domain': container_item[0],\n                'type': \"\",\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(\"lookup domain\", parameters=parameters, assets=['google_dns'], callback=lookup_ip_1, name=\"lookup_domain_1\")\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "ba5afd1f-4d9f-4268-81c3-dd1e8f28afcb",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 39,
+                        "line_start": 17,
+                        "message": "Configuring now",
+                        "name": "lookup domain",
+                        "notes": "",
+                        "number": 1,
+                        "order": 2,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 400,
+                            "y": 80
+                        },
+                        "previous_function": "",
+                        "previous_name": "lookup_domain_1",
+                        "required_params": {
+                            "domain": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Investigate",
+                        "type": "coa.Action",
+                        "warn": "",
+                        "z": 19
+                    }
+                ]
+            },
+            "notes": ""
+        },
+        "schema": 3,
+        "version": "4.6.19142"
+    },
+    "create_time": "2019-12-21T22:58:39.910658+00:00",
+    "draft_mode": false,
+    "labels": [
+        "generator"
+    ],
+    "tags": []
+}
