@@ -37,7 +37,7 @@ def geolocate_ip_1(action=None, success=None, container=None, results=None, hand
                 'context': {'artifact_id': container_item[1]},
             })
 
-    phantom.act("geolocate ip", parameters=parameters, assets=['maxmind'], callback=format_1, name="geolocate_ip_1")
+    phantom.act("geolocate ip", parameters=parameters, assets=['maxmind'], callback=join_format_1, name="geolocate_ip_1")
 
     return
 
@@ -58,7 +58,7 @@ def whois_ip_1(action=None, success=None, container=None, results=None, handle=N
                 'context': {'artifact_id': container_item[1]},
             })
 
-    phantom.act("whois ip", parameters=parameters, assets=['whois'], name="whois_ip_1")
+    phantom.act("whois ip", parameters=parameters, assets=['whois'], callback=join_format_1, name="whois_ip_1")
 
     return
 
@@ -79,19 +79,14 @@ def lookup_ip_1(action=None, success=None, container=None, results=None, handle=
                 'context': {'artifact_id': container_item[1]},
             })
 
-    phantom.act("lookup ip", parameters=parameters, assets=['google_dns'], name="lookup_ip_1")
+    phantom.act("lookup ip", parameters=parameters, assets=['google_dns'], callback=join_format_1, name="lookup_ip_1")
 
     return
 
 def format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
     phantom.debug('format_1() called')
     
-    template = """{0}
-{1}
-{2}
-{3}
-{4}
-{5}"""
+    template = """ipaddress={0}, continent={1}, country={2}, lat={3}, lon={4},postal_code={5},asn={6},summary={8},message={7}"""
 
     # parameter list for template variable replacement
     parameters = [
@@ -101,12 +96,26 @@ def format_1(action=None, success=None, container=None, results=None, handle=Non
         "geolocate_ip_1:action_result.data.*.latitude",
         "geolocate_ip_1:action_result.data.*.longitude",
         "geolocate_ip_1:action_result.data.*.postal_code",
+        "whois_ip_1:action_result.data.*.asn",
+        "lookup_ip_1:action_result.summary.hostname",
+        "lookup_ip_1:action_result.message",
     ]
 
     phantom.format(container=container, template=template, parameters=parameters, name="format_1")
 
     post_data_1(container=container)
 
+    return
+
+def join_format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
+    phantom.debug('join_format_1() called')
+
+    # check if all connected incoming actions are done i.e. have succeeded or failed
+    if phantom.actions_done([ 'geolocate_ip_1', 'whois_ip_1', 'lookup_ip_1' ]):
+        
+        # call connected block "format_1"
+        format_1(container=container, handle=handle)
+    
     return
 
 def post_data_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):

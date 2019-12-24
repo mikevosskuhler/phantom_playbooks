@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "test playbook",
-            "hash": "76e02701d7cc880f92b7488f0ba4e8b410c44316",
+            "hash": "2863388991866f5c8b23d4e1864a1de139c0446d",
             "joint": {
                 "cells": [
                     {
@@ -396,7 +396,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def geolocate_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('geolocate_ip_1() called')\n\n    # collect data for 'geolocate_ip_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'geolocate_ip_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'ip': container_item[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(\"geolocate ip\", parameters=parameters, assets=['maxmind'], callback=format_1, name=\"geolocate_ip_1\")\n\n    return",
+                        "block_code": "def geolocate_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('geolocate_ip_1() called')\n\n    # collect data for 'geolocate_ip_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'geolocate_ip_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'ip': container_item[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(\"geolocate ip\", parameters=parameters, assets=['maxmind'], callback=join_format_1, name=\"geolocate_ip_1\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -954,9 +954,9 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def whois_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('whois_ip_1() called')\n\n    # collect data for 'whois_ip_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'whois_ip_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'ip': container_item[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(\"whois ip\", parameters=parameters, assets=['whois'], name=\"whois_ip_1\")\n\n    return",
+                        "block_code": "def whois_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('whois_ip_1() called')\n\n    # collect data for 'whois_ip_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'whois_ip_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'ip': container_item[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(\"whois ip\", parameters=parameters, assets=['whois'], callback=join_format_1, name=\"whois_ip_1\")\n\n    return",
                         "callback_code": "",
-                        "callback_start": 1,
+                        "callback_start": 65,
                         "callsback": true,
                         "color": "",
                         "connected_to_start": true,
@@ -1346,9 +1346,9 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def lookup_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('lookup_ip_1() called')\n\n    # collect data for 'lookup_ip_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'lookup_ip_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'ip': container_item[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(\"lookup ip\", parameters=parameters, assets=['google_dns'], name=\"lookup_ip_1\")\n\n    return",
+                        "block_code": "def lookup_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('lookup_ip_1() called')\n\n    # collect data for 'lookup_ip_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'lookup_ip_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'ip': container_item[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(\"lookup ip\", parameters=parameters, assets=['google_dns'], callback=join_format_1, name=\"lookup_ip_1\")\n\n    return",
                         "callback_code": "",
-                        "callback_start": 1,
+                        "callback_start": 86,
                         "callsback": true,
                         "color": "",
                         "connected_to_start": true,
@@ -1456,84 +1456,6 @@
                         "z": 37
                     },
                     {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "d1a2643c-7258-4a0b-b9ce-3b04720426cd",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "e3a32561-e668-4523-a400-152c74ec45d3",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "7194d959-c814-4fb7-8014-b7263643157e",
-                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "type": "link",
-                        "z": 38
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "8b9e052e-3306-4ab6-9a5a-8248a66b059f",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "f0073c91-f4f9-4335-88d6-2cac98b8a62d",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "7194d959-c814-4fb7-8014-b7263643157e",
-                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "type": "link",
-                        "z": 39
-                    },
-                    {
                         "0": "E",
                         "1": "N",
                         "2": "D",
@@ -1578,7 +1500,7 @@
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": true,
-                        "connection_name": "lookup ip, whois ip, post data",
+                        "connection_name": "post data",
                         "connection_type": "action",
                         "custom_callback": "",
                         "custom_code": "",
@@ -1596,8 +1518,8 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 148,
-                        "line_start": 135,
+                        "line_end": 157,
+                        "line_start": 144,
                         "name": "",
                         "notes": "",
                         "number": 0,
@@ -1671,200 +1593,6 @@
                         "type": "coa.StartEnd",
                         "warn": false,
                         "z": 41
-                    },
-                    {
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".format": {
-                                "text": "format 1"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out-1": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out-1>.port-body": {
-                                "port": {
-                                    "id": "out-1",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "format"
-                            },
-                            "g.code image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1
-                            }
-                        },
-                        "block_code": "def format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('format_1() called')\n    \n    template = \"\"\"{0}\n{1}\n{2}\n{3}\n{4}\n{5}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.sourceAddress\",\n        \"geolocate_ip_1:action_result.data.*.continent_name\",\n        \"geolocate_ip_1:action_result.data.*.country_name\",\n        \"geolocate_ip_1:action_result.data.*.latitude\",\n        \"geolocate_ip_1:action_result.data.*.longitude\",\n        \"geolocate_ip_1:action_result.data.*.postal_code\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"format_1\")\n\n    post_data_1(container=container)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "geolocate ip",
-                        "connection_type": "action",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "",
-                        "description": "",
-                        "format": "format",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "addee1e7-d963-4d38-a514-26379b951bbc",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 112,
-                        "line_start": 86,
-                        "message": "Configuring now",
-                        "name": "format",
-                        "notes": "",
-                        "number": 1,
-                        "order": 5,
-                        "outPorts": [
-                            "out-1"
-                        ],
-                        "parameters": [
-                            {
-                                "position": 1,
-                                "type": "",
-                                "value": "artifact:*.cef.sourceAddress"
-                            },
-                            {
-                                "position": 1,
-                                "type": "",
-                                "value": "geolocate_ip_1:action_result.data.*.continent_name"
-                            },
-                            {
-                                "position": 2,
-                                "type": "",
-                                "value": "geolocate_ip_1:action_result.data.*.country_name"
-                            },
-                            {
-                                "position": 3,
-                                "type": "",
-                                "value": "geolocate_ip_1:action_result.data.*.latitude"
-                            },
-                            {
-                                "position": 4,
-                                "type": "",
-                                "value": "geolocate_ip_1:action_result.data.*.longitude"
-                            },
-                            {
-                                "position": 5,
-                                "type": "",
-                                "value": "geolocate_ip_1:action_result.data.*.postal_code"
-                            }
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 760,
-                            "y": -20
-                        },
-                        "previous_function": "",
-                        "previous_name": "format_1",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "format",
-                        "status": "",
-                        "template": "{0}\n{1}\n{2}\n{3}\n{4}\n{5}",
-                        "title": "format",
-                        "type": "coa.Format",
-                        "warn": false,
-                        "z": 42
                     },
                     {
                         "attrs": {
@@ -2097,7 +1825,7 @@
                         "callsback": true,
                         "color": "",
                         "connected_to_start": true,
-                        "connection_name": "geolocate ip",
+                        "connection_name": "geolocate ip, whois ip, lookup ip",
                         "connection_type": "action",
                         "custom_callback": "",
                         "custom_code": "",
@@ -2116,8 +1844,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 135,
-                        "line_start": 112,
+                        "line_end": 144,
+                        "line_start": 121,
                         "message": "Configuring now",
                         "name": "post data",
                         "notes": "",
@@ -2238,6 +1966,293 @@
                         },
                         "type": "link",
                         "z": 45
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "bcb9304a-875b-46dd-b254-b21aa321ca24",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "f0073c91-f4f9-4335-88d6-2cac98b8a62d",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "addee1e7-d963-4d38-a514-26379b951bbc",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 47
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "4f6efda9-7860-4c21-8d97-89eea9a53ad7",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "e3a32561-e668-4523-a400-152c74ec45d3",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "addee1e7-d963-4d38-a514-26379b951bbc",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 48
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".format": {
+                                "text": "format 1"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out-1": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out-1>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "format"
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('format_1() called')\n    \n    template = \"\"\"ipaddress={0}, continent={1}, country={2}, lat={3}, lon={4},postal_code={5},asn={6},summary={8},message={7}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.sourceAddress\",\n        \"geolocate_ip_1:action_result.data.*.continent_name\",\n        \"geolocate_ip_1:action_result.data.*.country_name\",\n        \"geolocate_ip_1:action_result.data.*.latitude\",\n        \"geolocate_ip_1:action_result.data.*.longitude\",\n        \"geolocate_ip_1:action_result.data.*.postal_code\",\n        \"whois_ip_1:action_result.data.*.asn\",\n        \"lookup_ip_1:action_result.summary.hostname\",\n        \"lookup_ip_1:action_result.message\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"format_1\")\n\n    post_data_1(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "geolocate ip, whois ip, lookup ip",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "format": "format",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "addee1e7-d963-4d38-a514-26379b951bbc",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "def join_format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('join_format_1() called')\n\n    # check if all connected incoming actions are done i.e. have succeeded or failed\n    if phantom.actions_done([ 'geolocate_ip_1', 'whois_ip_1', 'lookup_ip_1' ]):\n        \n        # call connected block \"format_1\"\n        format_1(container=container, handle=handle)\n    \n    return",
+                        "join_optional": [],
+                        "join_start": 110,
+                        "line_end": 121,
+                        "line_start": 86,
+                        "message": "Configuring now",
+                        "name": "format",
+                        "notes": "",
+                        "number": 1,
+                        "order": 5,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "parameters": [
+                            {
+                                "position": 1,
+                                "type": "",
+                                "value": "artifact:*.cef.sourceAddress"
+                            },
+                            {
+                                "position": 1,
+                                "type": "",
+                                "value": "geolocate_ip_1:action_result.data.*.continent_name"
+                            },
+                            {
+                                "position": 2,
+                                "type": "",
+                                "value": "geolocate_ip_1:action_result.data.*.country_name"
+                            },
+                            {
+                                "position": 3,
+                                "type": "",
+                                "value": "geolocate_ip_1:action_result.data.*.latitude"
+                            },
+                            {
+                                "position": 4,
+                                "type": "",
+                                "value": "geolocate_ip_1:action_result.data.*.longitude"
+                            },
+                            {
+                                "position": 5,
+                                "type": "",
+                                "value": "geolocate_ip_1:action_result.data.*.postal_code"
+                            },
+                            {
+                                "position": 6,
+                                "type": "",
+                                "value": "whois_ip_1:action_result.data.*.asn"
+                            },
+                            {
+                                "position": 7,
+                                "type": "",
+                                "value": "lookup_ip_1:action_result.summary.hostname"
+                            },
+                            {
+                                "position": 8,
+                                "type": "",
+                                "value": "lookup_ip_1:action_result.message"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 760,
+                            "y": -20
+                        },
+                        "previous_function": "",
+                        "previous_name": "format_1",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "format",
+                        "status": "",
+                        "template": "ipaddress={0}, continent={1}, country={2}, lat={3}, lon={4},postal_code={5},asn={6},summary={8},message={7}",
+                        "title": "format",
+                        "type": "coa.Format",
+                        "warn": false,
+                        "z": 49
                     }
                 ]
             },
@@ -2246,7 +2261,7 @@
         "schema": 3,
         "version": "4.6.19142"
     },
-    "create_time": "2019-12-24T23:19:27.097633+00:00",
+    "create_time": "2019-12-24T23:27:51.618354+00:00",
     "draft_mode": false,
     "labels": [
         "events"
