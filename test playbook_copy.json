@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "test playbook",
-            "hash": "83c6879efca8ee73705e70179fb15e3383e2a0c4",
             "joint": {
                 "cells": [
                     {
@@ -1873,7 +1872,7 @@
     "create_time": "2019-12-24T22:53:53.131901+00:00",
     "draft_mode": false,
     "labels": [
-        "generator"
+        "events"
     ],
     "tags": []
 }
