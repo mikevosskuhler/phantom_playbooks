@@ -8,6 +8,104 @@ from datetime import datetime, timedelta
 
 def on_start(container):
     phantom.debug('on_start() called')
+    
+    # call 'geolocate_ip_1' block
+    geolocate_ip_1(container=container)
+
+    # call 'whois_ip_1' block
+    whois_ip_1(container=container)
+
+    # call 'lookup_ip_1' block
+    lookup_ip_1(container=container)
+
+    return
+
+def geolocate_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
+    phantom.debug('geolocate_ip_1() called')
+
+    # collect data for 'geolocate_ip_1' call
+    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])
+
+    parameters = []
+    
+    # build parameters list for 'geolocate_ip_1' call
+    for container_item in container_data:
+        if container_item[0]:
+            parameters.append({
+                'ip': container_item[0],
+                # context (artifact id) is added to associate results with the artifact
+                'context': {'artifact_id': container_item[1]},
+            })
+
+    phantom.act("geolocate ip", parameters=parameters, assets=['maxmind'], callback=format_1, name="geolocate_ip_1")
+
+    return
+
+def whois_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
+    phantom.debug('whois_ip_1() called')
+
+    # collect data for 'whois_ip_1' call
+    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])
+
+    parameters = []
+    
+    # build parameters list for 'whois_ip_1' call
+    for container_item in container_data:
+        if container_item[0]:
+            parameters.append({
+                'ip': container_item[0],
+                # context (artifact id) is added to associate results with the artifact
+                'context': {'artifact_id': container_item[1]},
+            })
+
+    phantom.act("whois ip", parameters=parameters, assets=['whois'], name="whois_ip_1")
+
+    return
+
+def lookup_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
+    phantom.debug('lookup_ip_1() called')
+
+    # collect data for 'lookup_ip_1' call
+    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])
+
+    parameters = []
+    
+    # build parameters list for 'lookup_ip_1' call
+    for container_item in container_data:
+        if container_item[0]:
+            parameters.append({
+                'ip': container_item[0],
+                # context (artifact id) is added to associate results with the artifact
+                'context': {'artifact_id': container_item[1]},
+            })
+
+    phantom.act("lookup ip", parameters=parameters, assets=['google_dns'], name="lookup_ip_1")
+
+    return
+
+def format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
+    phantom.debug('format_1() called')
+    
+    template = """{{ip: 0},
+{geolocate:{
+continent_name:1, 
+country_name:2,
+lat:3,
+lon:4,
+postal:5
+}}}"""
+
+    # parameter list for template variable replacement
+    parameters = [
+        "artifact:*.cef.sourceAddress",
+        "geolocate_ip_1:action_result.data.*.continent_name",
+        "geolocate_ip_1:action_result.data.*.country_name",
+        "geolocate_ip_1:action_result.data.*.latitude",
+        "geolocate_ip_1:action_result.data.*.longitude",
+        "geolocate_ip_1:action_result.data.*.postal_code",
+    ]
+
+    phantom.format(container=container, template=template, parameters=parameters, name="format_1")
 
     return
 
