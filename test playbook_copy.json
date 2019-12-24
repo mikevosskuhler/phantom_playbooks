@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "test playbook",
-            "hash": "95b1876f7557f4d8289d31a3c8025032664a882e",
+            "hash": "1eeb6fd8bf0be0f90a9e0ae84177a22b83d88304",
             "joint": {
                 "cells": [
                     {
@@ -567,7 +567,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def whois_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('whois_ip_1() called')\n\n    # collect data for 'whois_ip_1' call\n    inputs_data_1 = phantom.collect2(container=container, datapath=['whois_domain_1:artifact:*.cef.sourceAddress', 'whois_domain_1:artifact:*.id'], action_results=results)\n\n    parameters = []\n    \n    # build parameters list for 'whois_ip_1' call\n    for inputs_item_1 in inputs_data_1:\n        if inputs_item_1[0]:\n            parameters.append({\n                'ip': inputs_item_1[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': inputs_item_1[1]},\n            })\n\n    phantom.act(\"whois ip\", parameters=parameters, assets=['whois'], name=\"whois_ip_1\", parent_action=action)\n\n    return",
+                        "block_code": "def whois_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('whois_ip_1() called')\n\n    # collect data for 'whois_ip_1' call\n    inputs_data_1 = phantom.collect2(container=container, datapath=['whois_domain_1:artifact:*.cef.sourceAddress', 'whois_domain_1:artifact:*.id'], action_results=results)\n\n    parameters = []\n    \n    # build parameters list for 'whois_ip_1' call\n    for inputs_item_1 in inputs_data_1:\n        if inputs_item_1[0]:\n            parameters.append({\n                'ip': inputs_item_1[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': inputs_item_1[1]},\n            })\n\n    phantom.act(\"whois ip\", parameters=parameters, assets=['whois'], name=\"whois_ip_1\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -721,7 +721,7 @@
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": true,
-                        "connection_name": "whois ip",
+                        "connection_name": "whois ip, lookup ip",
                         "connection_type": "action",
                         "custom_callback": "",
                         "custom_code": "",
@@ -799,8 +799,8 @@
                             }
                         },
                         "position": {
-                            "x": 1800,
-                            "y": 100
+                            "x": 900,
+                            "y": 80
                         },
                         "previous_function": "",
                         "previous_name": "",
@@ -1041,7 +1041,7 @@
                                 "opacity": 1
                             },
                             "g.delete": {
-                                "display": "none"
+                                "display": "block"
                             },
                             "g.error": {
                                 "opacity": 0
@@ -1062,7 +1062,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def lookup_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('lookup_ip_1() called')\n\n    # collect data for 'lookup_ip_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'lookup_ip_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'ip': container_item[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(\"lookup ip\", parameters=parameters, assets=['google_dns'], name=\"lookup_ip_1\", parent_action=action)\n\n    return",
+                        "block_code": "def lookup_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('lookup_ip_1() called')\n\n    # collect data for 'lookup_ip_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'lookup_ip_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'ip': container_item[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(\"lookup ip\", parameters=parameters, assets=['google_dns'], name=\"lookup_ip_1\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -1248,6 +1248,45 @@
                         },
                         "type": "link",
                         "z": 22
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "1b4790ec-30d0-4d87-9dd8-4592f528f562",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "9f39724f-9ae7-4eac-a034-6ccc86b7a307",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "7194d959-c814-4fb7-8014-b7263643157e",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 23
                     }
                 ]
             },
@@ -1256,7 +1295,7 @@
         "schema": 3,
         "version": "4.6.19142"
     },
-    "create_time": "2019-12-24T22:31:48.213050+00:00",
+    "create_time": "2019-12-24T22:32:54.853142+00:00",
     "draft_mode": false,
     "labels": [
         "generator"

@@ -34,7 +34,7 @@ def lookup_ip_1(action=None, success=None, container=None, results=None, handle=
                 'context': {'artifact_id': container_item[1]},
             })
 
-    phantom.act("lookup ip", parameters=parameters, assets=['google_dns'], name="lookup_ip_1", parent_action=action)
+    phantom.act("lookup ip", parameters=parameters, assets=['google_dns'], name="lookup_ip_1")
 
     return
 
@@ -55,7 +55,7 @@ def whois_ip_1(action=None, success=None, container=None, results=None, handle=N
                 'context': {'artifact_id': inputs_item_1[1]},
             })
 
-    phantom.act("whois ip", parameters=parameters, assets=['whois'], name="whois_ip_1", parent_action=action)
+    phantom.act("whois ip", parameters=parameters, assets=['whois'], name="whois_ip_1")
 
     return
 
