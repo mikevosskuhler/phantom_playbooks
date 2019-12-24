@@ -130,11 +130,11 @@ def post_data_1(action=None, success=None, container=None, results=None, handle=
     
     # build parameters list for 'post_data_1' call
     parameters.append({
-        'data': formatted_data_1,
+        'index': "phantom",
         'host': "local phantom",
+        'data': formatted_data_1,
         'source': "Phantom_events",
         'source_type': "Automation/Orchestration Platform",
-        'index': "phantom",
     })
 
     phantom.act("post data", parameters=parameters, assets=['local splunk'], name="post_data_1")

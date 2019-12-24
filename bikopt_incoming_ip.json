@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "test playbook",
-            "hash": "2863388991866f5c8b23d4e1864a1de139c0446d",
+            "hash": "4e41ef8cf829ea541016cc15c3bfc0e602bf20f1",
             "joint": {
                 "cells": [
                     {
@@ -1806,6 +1806,12 @@
                             ".title": {
                                 "text": "Generic"
                             },
+                            "g.approver image": {
+                                "opacity": 1
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
                             "g.delete": {
                                 "display": "none"
                             },
@@ -1817,9 +1823,15 @@
                             },
                             "g.notes": {
                                 "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            },
+                            "g.timer image": {
+                                "opacity": 1
                             }
                         },
-                        "block_code": "def post_data_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('post_data_1() called')\n    \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'post_data_1' call\n    formatted_data_1 = phantom.get_format_data(name='format_1')\n\n    parameters = []\n    \n    # build parameters list for 'post_data_1' call\n    parameters.append({\n        'data': formatted_data_1,\n        'host': \"local phantom\",\n        'source': \"Phantom_events\",\n        'source_type': \"Automation/Orchestration Platform\",\n        'index': \"phantom\",\n    })\n\n    phantom.act(\"post data\", parameters=parameters, assets=['local splunk'], name=\"post_data_1\")\n\n    return",
+                        "block_code": "def post_data_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('post_data_1() called')\n    \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'post_data_1' call\n    formatted_data_1 = phantom.get_format_data(name='format_1')\n\n    parameters = []\n    \n    # build parameters list for 'post_data_1' call\n    parameters.append({\n        'index': \"phantom\",\n        'host': \"local phantom\",\n        'data': formatted_data_1,\n        'source': \"Phantom_events\",\n        'source_type': \"Automation/Orchestration Platform\",\n    })\n\n    phantom.act(\"post data\", parameters=parameters, assets=['local splunk'], name=\"post_data_1\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -1925,7 +1937,7 @@
                         "status": "",
                         "title": "Generic",
                         "type": "coa.Action",
-                        "warn": "",
+                        "warn": false,
                         "z": 44
                     },
                     {
@@ -2261,7 +2273,7 @@
         "schema": 3,
         "version": "4.6.19142"
     },
-    "create_time": "2019-12-24T23:27:51.618354+00:00",
+    "create_time": "2019-12-24T23:31:53.544532+00:00",
     "draft_mode": false,
     "labels": [
         "events"
