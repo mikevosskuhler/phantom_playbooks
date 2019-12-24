@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "test playbook",
-            "hash": "8e954250dbf1443655989d436bd8980b51506351",
+            "hash": "6864226e7a75b43e9cd2dd1bc5b1b80a170cf476",
             "joint": {
                 "cells": [
                     {
@@ -73,8 +73,8 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 118,
-                        "line_start": 105,
+                        "line_end": 123,
+                        "line_start": 110,
                         "name": "",
                         "notes": "",
                         "number": 0,
@@ -1726,7 +1726,7 @@
                                 "display": "block"
                             }
                         },
-                        "block_code": "def format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('format_1() called')\n    \n    template = \"\"\"{{\\\"ip\\\":\\\"{0}\\\", \\\"geolocate.continent_name\\\":\\\"{1}\\\"}}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.sourceAddress\",\n        \"geolocate_ip_1:action_result.data.*.continent_name\",\n        \"geolocate_ip_1:action_result.data.*.country_name\",\n        \"geolocate_ip_1:action_result.data.*.latitude\",\n        \"geolocate_ip_1:action_result.data.*.longitude\",\n        \"geolocate_ip_1:action_result.data.*.postal_code\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"format_1\")\n\n    return",
+                        "block_code": "def format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('format_1() called')\n    \n    template = \"\"\"{0}\n{1}\n{2}\n{3}\n{4}\n{5}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.sourceAddress\",\n        \"geolocate_ip_1:action_result.data.*.continent_name\",\n        \"geolocate_ip_1:action_result.data.*.country_name\",\n        \"geolocate_ip_1:action_result.data.*.latitude\",\n        \"geolocate_ip_1:action_result.data.*.longitude\",\n        \"geolocate_ip_1:action_result.data.*.postal_code\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"format_1\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": false,
@@ -1750,7 +1750,7 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 105,
+                        "line_end": 110,
                         "line_start": 86,
                         "message": "Configuring now",
                         "name": "format",
@@ -1857,7 +1857,7 @@
                         },
                         "state": "format",
                         "status": "",
-                        "template": "{{\"ip\":\"{0}\", \"geolocate.continent_name\":\"{1}\"}}",
+                        "template": "{0}\n{1}\n{2}\n{3}\n{4}\n{5}",
                         "title": "format",
                         "type": "coa.Format",
                         "warn": false,
@@ -1870,7 +1870,7 @@
         "schema": 3,
         "version": "4.6.19142"
     },
-    "create_time": "2019-12-24T23:06:21.693233+00:00",
+    "create_time": "2019-12-24T23:15:57.924251+00:00",
     "draft_mode": false,
     "labels": [
         "events"
