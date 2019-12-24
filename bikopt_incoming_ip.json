@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "test playbook",
-            "hash": "4e41ef8cf829ea541016cc15c3bfc0e602bf20f1",
             "joint": {
                 "cells": [
                     {
@@ -1813,7 +1812,7 @@
                                 "opacity": 1
                             },
                             "g.delete": {
-                                "display": "none"
+                                "display": "block"
                             },
                             "g.error": {
                                 "opacity": 0
@@ -2276,7 +2275,7 @@
     "create_time": "2019-12-24T23:31:53.544532+00:00",
     "draft_mode": false,
     "labels": [
-        "events"
+        "bikopt"
     ],
     "tags": []
 }
