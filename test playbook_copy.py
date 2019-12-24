@@ -105,6 +105,31 @@ def format_1(action=None, success=None, container=None, results=None, handle=Non
 
     phantom.format(container=container, template=template, parameters=parameters, name="format_1")
 
+    post_data_1(container=container)
+
+    return
+
+def post_data_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
+    phantom.debug('post_data_1() called')
+    
+    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))
+    
+    # collect data for 'post_data_1' call
+    formatted_data_1 = phantom.get_format_data(name='format_1')
+
+    parameters = []
+    
+    # build parameters list for 'post_data_1' call
+    parameters.append({
+        'data': formatted_data_1,
+        'host': "local phantom",
+        'source': "Phantom_events",
+        'source_type': "Automation/Orchestration Platform",
+        'index': "phantom",
+    })
+
+    phantom.act("post data", parameters=parameters, assets=['local splunk'], name="post_data_1")
+
     return
 
 def on_finish(container, summary):
