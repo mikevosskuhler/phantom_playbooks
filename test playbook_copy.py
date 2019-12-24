@@ -86,13 +86,13 @@ def lookup_ip_1(action=None, success=None, container=None, results=None, handle=
 def format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
     phantom.debug('format_1() called')
     
-    template = """{{ip: 0},
+    template = """{{ip: {0}},
 {geolocate:{
-continent_name:1, 
-country_name:2,
-lat:3,
-lon:4,
-postal:5
+continent_name:{1}, 
+country_name:{2},
+lat:{3},
+lon:{4},
+postal:{5}
 }}}"""
 
     # parameter list for template variable replacement
